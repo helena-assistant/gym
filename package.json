@@ -1,0 +1,26 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "Let's measure helena's accuracy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helena-assistant/gym.git"
+  },
+  "keywords": [
+    "Helena"
+  ],
+  "author": "Guilherme Monteiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helena-assistant/gym/issues"
+  },
+  "homepage": "https://github.com/helena-assistant/gym#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ibm-watson": "^6.1.1"
+  }
+}
