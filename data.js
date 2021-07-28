@@ -1,10 +1,99 @@
 module.exports = {
-    'abater-horas-de-atv': [
-        'Como abater horas ATV?',
-        'Como aplico as horas de ATV?'
-    ],
-    'aproveitamento-de-disciplinas': [
-        'Aproveitar disciplina de outra faculdade',
-        'Aproveitar obrigatórias'
-    ]
-}
+  "abater-horas-de-atv": [
+    "Como abater horas ATV?",
+    "Como aplico as horas de ATV?",
+    "Como cortar minhas horas de ATV?",
+    "Dar baixa nas horas de ATV.",
+    "Está sendo possível solicitar o lançamento de ATVs?",
+    "Estou com umas ATV's para lançar, referente ao meu estágio. Está sendo possível solicitar esse lançamento?",
+    "Gostaria de saber como está funcionando para cortar minhas horas de ATV durante esse período online?",
+    "Onde preciso entregar os documentos de ATV?",
+  ],
+  "aproveitamento-de-disciplinas": [
+    "Aproveitar disciplina de outra faculdade",
+    "Aproveitar obrigatórias",
+    "Como aproveitar as disciplinas de outra faculdade?",
+    "Como aproveitar matérias",
+    "Tem algum jeito de aproveitar outras matérias?",
+  ],
+  "calendario-academico": [
+    "Calendario academico",
+    "Onde posso acessar o calendário academico?",
+    "Onde posso consultar o calendário academico?",
+  ],
+  "cancelamento-de-matricula": [
+    "Cancelamento",
+    "Cancelamento de matricula",
+    "Como faz pra cancelar a matrícula",
+    "Gostaria de saber como faz o cancelamento de matrícula",
+    "Quero cancelar minha matrícula",
+  ],
+  "carteira-estudantil": [
+    "Carteirinha",
+    "Onde posso pedir a segunda via da carteirinha",
+    "Pra que serve a carteirinha",
+    "Pra que serve a carteirinha estudantil?",
+    "Segunda via carteirinha",
+    "Segunda via da carteirinha de estudante",
+  ],
+  "certificados-monitoria-tutoria": [
+    "Como aplicar horas de monitoria",
+    "Como aplicar horas de tutoria",
+    "Como validar minhas horas de monitoria?",
+    "Como validar minhas horas de tutoria?",
+  ],
+  "colação-de-grau": [
+    "Colação de grau extraordinária",
+    "Estudante não apto a colação de grau.",
+    "Não colação de grau",
+    "Pedir colação de grau",
+    "Problemas com colação de Grau",
+    "Protocolar o requerimento de colação de grau extraordinária",
+  ],
+  "desligamento-da-universidade": [
+    "Como acontece o desligamento",
+    "Desligamento",
+    "Desligamento da universidade",
+    "Quando posso ser desligado",
+    "Quando posso ser desligado da universidade",
+    "Quando um aluno é desligado?",
+  ],
+  estagio: [
+    "Como funciona o plano de atividades",
+    "Documentação de Estágio.",
+    "Documentação para contrato de estágio.",
+    "Estágio não obrigatório",
+    "Para onde enviar a documentação de estágio?",
+    "Preciso de um professo específico para assinar o contrato de estágio?",
+    "Processo de aprovação de estágio.",
+    "Processo de aprovação de estágio pela universidade.",
+    "Quais documentos preciso para contrato de estágio?",
+    "Quais são os documentos para estágio?",
+    "Qual professor deve assitnar o contrato de estágio?",
+    "Termo de Compromisso de estágio não obrigatório",
+  ],
+  "exame-especial": [
+    "Como funciona o exame especial",
+    "Exame especial",
+    "Gostaria de saber mais sobre os exames especiais",
+    "Quando acontece o exame especial",
+    "Quando posso fazer o exame especial",
+  ],
+  "horas-validas-de-atv": [
+    "Eu consigo abater horas de atv 100 com horas de trabalho como desenvolvedor CLT?",
+    "Horas válidas de atv",
+    "Quais atividades são válidas para atv?",
+    "Quais atividades são válidas para atv100?",
+    "Quais horas são válidas para atv?",
+    "Quais horas são válidas para atv100?",
+    "Tutoria conta como pontos para receber ATV 100?",
+  ],
+  "trancamento-de-disciplina": [
+    "Como trancar minha disciplina",
+    "Como trancar uma disciplina?",
+    "Como trancar uma matéria?",
+    "O que é trancamento de disciplina?",
+    "trancamento",
+    "trancamento de disciplina",
+  ],
+};
