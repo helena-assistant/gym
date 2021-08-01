@@ -23,7 +23,6 @@ module.exports = {
   ],
   "aproveitamento-de-disciplinas": [
     "Aproveitar disciplina de outra faculdade",
-    "Aproveitar obrigatórias",
     "Como aproveitar as disciplinas de outra faculdade?",
     "Como aproveitar matérias",
     "Tem algum jeito de aproveitar outras matérias?",
@@ -64,6 +63,7 @@ module.exports = {
     "calendario da universidade",
     "como podemos consultar o calendario academico",
     "e sobr o calendario academico",
+    "sobre o calendário da facul",
   ],
   "cancelamento-de-matricula": [
     "Cancelamento",
@@ -86,7 +86,6 @@ module.exports = {
     "clemanto de matrícula",
     "consegue me informar sobre o cacelamento de matrícula",
     "conseguiria mme dizer mais sobre o cancelamento de matrícula",
-    "cmo cancelar minha marticul",
   ],
   "carteira-estudantil": [
     "Carteirinha",
@@ -109,7 +108,6 @@ module.exports = {
     "sobre a carteinha estudantil",
     "cmo pedira carteirinha de estudante",
     "como pedir a carteirinha d estudante",
-    "saber mais sobre a carteirinha de estudante",
   ],
   "certificados-monitoria-tutoria": [
     "Como aplicar horas de monitoria",
@@ -132,7 +130,6 @@ module.exports = {
     "monitoria/tutoria",
     "cmo compensar hrs de monitoria",
     "como compensar horas de monitoria",
-    "helena vc pode me falar sobre as horas de monitoria",
   ],
   "colação-de-grau": [
     "Colação de grau extraordinária",
@@ -151,7 +148,6 @@ module.exports = {
     "colação extraodinária",
     "solicitação de colação de grau extraordinária",
     "solicitação de colação",
-    "queria saber mais sobre colação de grau",
     "como consigo solicitar uma colação extraodinária",
     "cmo posso protocolar um requerimento de colassao",
     "colassao estraodinaria",
@@ -169,7 +165,6 @@ module.exports = {
     "quando uma pessoa é deligada?",
     "deligamento",
     "o q é desligamento?",
-    "o q é deligamento",
     "desligamento da universidade",
     "deligamento da universidade",
     "quando sou desligado",
@@ -192,7 +187,6 @@ module.exports = {
     "Quais documentos preciso para contrato de estágio?",
     "Quais são os documentos para estágio?",
     "Qual professor deve assinar o contrato de estágio?",
-    "Termo de Compromisso de estágio não obrigatório",
     "documentação de estágio não obrigatório",
     "pode me informar sobre a documentação de estágio",
     "docs de estgio",
@@ -221,7 +215,6 @@ module.exports = {
     "quando acontecem os esames especiais",
     "ei helena, me conte sobre os exames especiais",
     "o professor pode não aplicar o exame especiais",
-    "e se eu não fizer os exames especiais",
     "como fazer fazer os exames especiais",
     "fazr os ezames especiais",
     "examis especiais",
@@ -232,7 +225,6 @@ module.exports = {
     "Quais atividades são válidas para atv?",
     "Quais atividades são válidas para atv100?",
     "Quais horas são válidas para atv?",
-    "Quais horas são válidas para atv100?",
     "Tutoria conta como pontos para receber ATV 100?",
     "O que posso validar como atv",
     "o que são hrs válidas atv",
@@ -270,6 +262,5 @@ module.exports = {
     "o que é o tracamento de diciplina",
     "até quando posso trancar matrícula",
     "helena, como é trancar matéria",
-    "como faz pra trancar matéria",
   ],
 };

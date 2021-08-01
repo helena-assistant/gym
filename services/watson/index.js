@@ -56,9 +56,9 @@ class WatsonService {
 
       const mappedSuggestions = suggestions
         ? suggestions.map((suggestion) => ({
-          propensity: suggestion.internal.propensity,
-          label: suggestion.label,
-        }))
+            propensity: suggestion.internal?.propensity,
+            label: suggestion.label,
+          }))
         : [];
 
       return {

@@ -1,4 +1,5 @@
 require("dotenv").config();
+const fs = require("fs");
 const watsonService = require("./services/watson");
 const data = require("./data");
 
@@ -23,6 +24,7 @@ const main = async () => {
     const watsonResponses = await Promise.all(promises);
 
     watsonResponses.forEach((watsonResponse) => {
+      reportByIntent.numberOfAttempts += 1;
       const features = watsonService.extractFeatures(watsonResponse);
 
       if (features.main_intent === intent) {
@@ -38,6 +40,10 @@ const main = async () => {
   }
 
   console.log(report);
+
+  const jsonContent = JSON.stringify(report);
+
+  fs.writeFileSync(`result-${new Date()}.json`, jsonContent);
 };
 
 main()
