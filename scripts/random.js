@@ -1,7 +1,7 @@
 require("dotenv").config();
 const fs = require("fs");
-const watsonService = require("./services/watson");
-const data = require("./data");
+const watsonService = require("../services/watson");
+const data = require("../data/data-v1");
 
 const selectMessagesRandomly = () => {
   const NUMBER_OF_ATTEMPTS = 200;

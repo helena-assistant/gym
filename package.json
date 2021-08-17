@@ -4,7 +4,11 @@
   "description": "Let's measure helena's accuracy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "random": "node run ./scripts/random.js",
+    "standard": "node run ./scripts/standard.js",
+    "mixed": "node run ./scripts/mixed.js"
+
   },
   "repository": {
     "type": "git",
