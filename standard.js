@@ -43,7 +43,7 @@ const main = async () => {
 
   const jsonContent = JSON.stringify(report);
 
-  fs.writeFileSync(`result-${new Date()}.json`, jsonContent);
+  fs.writeFileSync(`results/standard/result-${new Date()}.json`, jsonContent);
 };
 
 main()
