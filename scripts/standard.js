@@ -2,6 +2,7 @@ require("dotenv").config();
 const fs = require("fs");
 const watsonService = require("../services/watson");
 const data = require("../data/data-v1");
+const { NOT_ANSWERED_INTENT } = require("../constants");
 
 const main = async () => {
   const sessionId = await watsonService.getSession();
@@ -15,6 +16,7 @@ const main = async () => {
       numberOfAttempts: 0,
       success: 0,
       accuracy: 0.0,
+      notAnswered: 0,
     };
 
     const promises = messages.map((message) =>
@@ -27,7 +29,9 @@ const main = async () => {
       reportByIntent.numberOfAttempts += 1;
       const features = watsonService.extractFeatures(watsonResponse);
 
-      if (features.main_intent === intent) {
+      if (features.main_intent === NOT_ANSWERED_INTENT) {
+        reportByIntent.notAnswered += 1;
+      } else if (features.main_intent === intent) {
         reportByIntent.success += 1;
       }
     });

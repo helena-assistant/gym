@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "random": "node run ./scripts/random.js",
-    "standard": "node run ./scripts/standard.js",
-    "mixed": "node run ./scripts/mixed.js"
+    "random": "node  ./scripts/random.js",
+    "standard": "node  ./scripts/standard.js",
+    "mixed": "node  ./scripts/mixed.js",
+    "random-mixed": "node  ./scripts/random-mixed.js"
 
   },
   "repository": {

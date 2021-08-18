@@ -2,6 +2,21 @@ require("dotenv").config();
 const fs = require("fs");
 const watsonService = require("../services/watson");
 const data = require("../data/data-mixed");
+const { NOT_ANSWERED_INTENT } = require("../constants");
+
+const convertMessages = (messages) => {
+  const correctMessages = messages.correct.map((message) => ({
+    text: message,
+    shouldBeCorrect: true,
+  }));
+
+  const incorrectMessages = messages.incorrect.map((message) => ({
+    text: message,
+    shouldBeCorrect: false,
+  }));
+
+  return Array.prototype.concat(correctMessages, incorrectMessages);
+};
 
 const main = async () => {
   const sessionId = await watsonService.getSession();
@@ -9,27 +24,40 @@ const main = async () => {
   const report = [];
 
   for (intent of intents) {
-    const messages = data[intent];
+    const messages = convertMessages(data[intent]);
     const reportByIntent = {
       intent,
       numberOfAttempts: 0,
       success: 0,
+      notAnswered: 0,
       accuracy: 0.0,
     };
 
     const promises = messages.map((message) =>
-      watsonService.sendAssistantMessage(message, sessionId)
+      watsonService.sendAssistantMessage(message.text, sessionId)
     );
 
     const watsonResponses = await Promise.all(promises);
 
     watsonResponses.forEach((watsonResponse) => {
-      reportByIntent.numberOfAttempts += 1;
       const features = watsonService.extractFeatures(watsonResponse);
+      const currentMessage = messages[reportByIntent.numberOfAttempts];
 
-      if (features.main_intent === intent) {
+      if (features.main_intent === NOT_ANSWERED_INTENT) {
+        reportByIntent.notAnswered += 1;
+      } else if (
+        currentMessage.shouldBeCorrect &&
+        features.main_intent === intent
+      ) {
+        reportByIntent.success += 1;
+      } else if (
+        !currentMessage.shouldBeCorrect &&
+        features.main_intent !== intent
+      ) {
         reportByIntent.success += 1;
       }
+
+      reportByIntent.numberOfAttempts += 1;
     });
 
     reportByIntent.accuracy = Number(
@@ -43,7 +71,7 @@ const main = async () => {
 
   const jsonContent = JSON.stringify(report);
 
-  fs.writeFileSync(`results/standard/result-${new Date()}.json`, jsonContent);
+  fs.writeFileSync(`results/mixed/result-${new Date()}.json`, jsonContent);
 };
 
 main()

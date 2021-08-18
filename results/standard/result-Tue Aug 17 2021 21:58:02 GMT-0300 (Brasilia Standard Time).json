@@ -1,0 +1,86 @@
+[
+  {
+    "intent": "abater-horas-de-atv",
+    "numberOfAttempts": 20,
+    "success": 16,
+    "accuracy": "80.000",
+    "notAnswered": 3
+  },
+  {
+    "intent": "aproveitamento-de-disciplinas",
+    "numberOfAttempts": 20,
+    "success": 14,
+    "accuracy": "70.000",
+    "notAnswered": 2
+  },
+  {
+    "intent": "calendario-academico",
+    "numberOfAttempts": 20,
+    "success": 19,
+    "accuracy": "95.000",
+    "notAnswered": 1
+  },
+  {
+    "intent": "cancelamento-de-matricula",
+    "numberOfAttempts": 20,
+    "success": 18,
+    "accuracy": "90.000",
+    "notAnswered": 2
+  },
+  {
+    "intent": "carteira-estudantil",
+    "numberOfAttempts": 20,
+    "success": 19,
+    "accuracy": "95.000",
+    "notAnswered": 1
+  },
+  {
+    "intent": "certificados-monitoria-tutoria",
+    "numberOfAttempts": 20,
+    "success": 19,
+    "accuracy": "95.000",
+    "notAnswered": 0
+  },
+  {
+    "intent": "colação-de-grau",
+    "numberOfAttempts": 20,
+    "success": 18,
+    "accuracy": "90.000",
+    "notAnswered": 2
+  },
+  {
+    "intent": "desligamento-da-universidade",
+    "numberOfAttempts": 20,
+    "success": 20,
+    "accuracy": "100.000",
+    "notAnswered": 0
+  },
+  {
+    "intent": "estagio",
+    "numberOfAttempts": 20,
+    "success": 20,
+    "accuracy": "100.000",
+    "notAnswered": 0
+  },
+  {
+    "intent": "exame-especial",
+    "numberOfAttempts": 20,
+    "success": 19,
+    "accuracy": "95.000",
+    "notAnswered": 0
+  },
+  {
+    "intent": "horas-validas-de-atv",
+    "numberOfAttempts": 20,
+    "success": 16,
+    "accuracy": "80.000",
+    "notAnswered": 1
+  },
+  {
+    "intent": "trancamento-de-disciplina",
+    "numberOfAttempts": 20,
+    "success": 17,
+    "accuracy": "85.000",
+    "notAnswered": 3
+  }
+]

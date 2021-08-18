@@ -1,7 +1,21 @@
 require("dotenv").config();
 const fs = require("fs");
 const watsonService = require("../services/watson");
-const data = require("../data/data-v1");
+const data = require("../data/data-mixed");
+
+const convertMessages = (messages) => {
+  const correctMessages = messages.correct.map((message) => ({
+    text: message,
+    shouldBeCorrect: true,
+  }));
+
+  const incorrectMessages = messages.incorrect.map((message) => ({
+    text: message,
+    shouldBeCorrect: false,
+  }));
+
+  return Array.prototype.concat(correctMessages, incorrectMessages);
+};
 
 const selectMessagesRandomly = () => {
   const NUMBER_OF_ATTEMPTS = 200;
@@ -16,9 +30,11 @@ const selectMessagesRandomly = () => {
 
     const selectedRandomIntent = intents[randomIntentIndex];
     const messages = data[selectedRandomIntent];
-    const numberOfMessages = messages.length - 1;
+    const convertedMessages = convertMessages(messages);
+    const numberOfMessages = convertedMessages.length - 1;
     const randomMessageIndex = Math.floor(Math.random() * numberOfMessages + 1);
-    const selectedRandomMessage = messages[randomMessageIndex];
+    const selectedRandomMessage = convertedMessages[randomMessageIndex];
+
     randomMessages.push({
       message: selectedRandomMessage,
       intent: selectedRandomIntent,
@@ -41,16 +57,18 @@ const main = async () => {
   };
 
   const promises = randomMessages.map((item) =>
-    watsonService.sendAssistantMessage(item.message, sessionId)
+    watsonService.sendAssistantMessage(item.message.text, sessionId)
   );
 
   const watsonResponses = await Promise.all(promises);
 
   watsonResponses.forEach((watsonResponse) => {
     const features = watsonService.extractFeatures(watsonResponse);
-    const intent = randomMessages[reportByIntent.numberOfAttempts].intent;
+    const { intent, message } = randomMessages[reportByIntent.numberOfAttempts];
 
-    if (features.main_intent === intent) {
+    if (features.main_intent === intent && message.shouldBeCorrect) {
+      reportByIntent.success += 1;
+    } else if (features.main_intent !== intent && !message.shouldBeCorrect) {
       reportByIntent.success += 1;
     }
 
@@ -67,7 +85,10 @@ const main = async () => {
 
   const jsonContent = JSON.stringify(report);
 
-  fs.writeFileSync(`results/random/result-${new Date()}.json`, jsonContent);
+  fs.writeFileSync(
+    `results/random-mixed/result-${new Date()}.json`,
+    jsonContent
+  );
 };
 
 main()
